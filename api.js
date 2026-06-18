@@ -1,4 +1,6 @@
 
+
+// Mock database with 2 student records
 const mockStudentDB = [
     {
         id: 1779353927081,
@@ -14,10 +16,13 @@ const mockStudentDB = [
     }
 ];
 
+
+//Simulates the GET REQUEST to fetch all students from the database
 export function getStudentsAPI () {
     return mockStudentDB;
 }
 
+//Simulates the POST REQUEST to add a new student to the database
 export function addStudentsAPI (newStudentData) {
     const savedStudent = {
         id: Math.floor(
@@ -30,3 +35,4 @@ export function addStudentsAPI (newStudentData) {
     mockStudentDB.push(savedStudent);
     return savedStudent;
 }
+
