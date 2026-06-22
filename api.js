@@ -28,11 +28,13 @@ export function addStudentsAPI (newStudentData) {
         id: Math.floor(
         new Date(2020, 0, 1).getTime() +
         Math.random() * (Date.now() - new Date(2020, 0, 1).getTime())
-        ),
+        ), // Generate a random ID based on the current timestamp and a random offset
         ...newStudentData,
     };
 
     mockStudentDB.push(savedStudent);
     return savedStudent;
 }
+
+export {mockStudentDB};
 
